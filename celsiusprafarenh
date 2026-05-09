@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main(){
+
+int i, aluno, menorAluno, maiorAluno;
+float altura, menorAltura, maiorAltura;
+
+for(i = 1; i <= 10; i++){
+printf("digite o numero de 10 alunos e suas respectivas alturas em centimetros\n");
+    printf("aluno:\n");
+    scanf("%d", &aluno);
+        printf("altura:\n");
+        scanf("%f", &altura);
+         if(i == 1) {
+            maiorAltura = altura;
+            menorAltura = altura;
+
+            maiorAluno = aluno;
+            menorAluno = aluno;
+        }
+
+        if(altura > maiorAltura) {
+            maiorAltura = altura;
+            maiorAluno = aluno;
+        }
+
+        if(altura < menorAltura) {
+            menorAltura = altura;
+            menorAluno = aluno;
+        }
+
+        printf("\n");
+    }
+
+    printf("Aluno mais alto: %d\n", maiorAluno);
+    printf("Maior altura: %.2f\n\n", maiorAltura);
+
+    printf("Aluno mais baixo: %d\n", menorAluno);
+    printf("Menor altura: %.2f\n", menorAltura);
+
+return 0;
+}
